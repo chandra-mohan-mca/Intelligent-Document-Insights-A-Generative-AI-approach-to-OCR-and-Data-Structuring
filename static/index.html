@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyam Internet - Handwriting to Text</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Satyam Internet Online Service</h1>
+            <p>Advanced Handwriting Recognition (Tamil & English)</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Upload Section -->
+            <div class="card">
+                <h2>1. Upload Document</h2>
+                <div id="drop-area" class="upload-zone">
+                    <svg class="upload-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                    </svg>
+                    <p class="upload-text">Drag & Drop your file here</p>
+                    <p class="upload-subtext">or click to browse</p>
+                    <input type="file" id="fileInput" accept="image/*,application/pdf">
+                    <div id="preview-container">
+                        <img id="preview-image" alt="Preview">
+                    </div>
+                </div>
+                <div id="file-info" class="file-info"></div>
+                <button id="convertBtn" class="btn btn-primary" disabled>
+                    <span>Convert to Text</span>
+                    <svg class="loading" width="20" height="20" viewBox="0 0 24 24" fill="none" class="animate-spin ml-2">
+                         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle>
+                         <path fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" class="opacity-75"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Result Section -->
+            <div class="card">
+                <h2>2. Edit & Download</h2>
+                <div class="transcription-box">
+                    <textarea id="transcription" placeholder="Your transcribed text will appear here..."></textarea>
+                </div>
+                <div class="btn-group">
+                    <button id="saveBtn" class="btn btn-secondary">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px; margin-right: 8px;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                        </svg>
+                        Save to Word
+                    </button>
+                    <!-- Copy to clipboard button could be added here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Satyam Internet Online Service. High Accuracy AI Engine.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
